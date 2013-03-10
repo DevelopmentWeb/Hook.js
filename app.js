@@ -5,7 +5,7 @@ var spinnerUrl = chrome.extension.getURL("hook-spinner.gif");
 var scriptUrl = chrome.extension.getURL("hook.js");
 
 var hookDiv = [
-    '<div id="hook" style="background: url(\''+bgUrl+'\') repeat">'
+    '<div id="hookjs-plugin" style="display:none; background: url(\''+bgUrl+'\') repeat;">'
       ,'<div id="loader">'
       ,'<div class="spinner" style="background: url(\''+spinnerUrl+'\') no-repeat">'
       ,'</div>'
@@ -17,4 +17,6 @@ var hookDiv = [
 
 $('body').prepend(hookDiv);
 
-
+setTimeout(function() {
+  $('#hookjs-plugin').css('display','block');
+}, 200);
