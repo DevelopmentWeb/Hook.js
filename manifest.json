@@ -1,0 +1,19 @@
+{
+  "name": "Hook.js",
+  "description": "Pull to reload for the web.",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "css": ["hook.css"],
+      "js": ["jquery.js" , "app.js"]
+    }
+  ],
+  "web_accessible_resources":
+  [
+    "hook-bg.png",
+    "hook-spinner.gif",
+    "hook.js"
+  ],
+  "manifest_version": 2
+}
